@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coursester</title>
+</head>
+<body>
+<h1>Courses</h1>
+<table style="width:100%; text-align: center">
+    <tr>
+        <td>Id</td>
+        <td>Course Name</td>
+        <td>Maximum ppx</td>
+        <td>Current ppx</td>
+        <td>Join Course</td>
+        <td>Status</td>
+    </tr>
+
+    {% for record in records%}
+    <tr>
+        <td>{{record[0]}}</td>
+        <td>{{record[1]}}</td>
+        <td>{{record[2]}}</td>
+        <td>{{record[3]}}</td>
+        <td><a href="{{url_for('get_queue_number', rid = record[0])}}"><button>Join</button></a></td>
+        <td><a href="{{url_for('display_queue', rid = record[0])}}"><button>Show</button></a></td>
+        <td></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{url_for('new_queue')}}"><button>New Course</button></a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coursester</title>
+</head>
+<body>
+<h1>Create a Course</h1>
+<form action = "{{url_for('new_course')}}" method = 'POST'>
+    <p>Course Name:</p>
+    <input type = 'text' value='missing' size='30' name = 'course_name'>    
+    <p>Course Quota:</p>
+    <input type = 'text' value='1' size='30' name = 'course_quota'>
+    <input type = 'submit' value='Create'>
+</form>
+</body>
+</html>

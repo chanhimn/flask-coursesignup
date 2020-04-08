@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coursester</title>
+</head>
+<body>
+<h1>Join a Course</h1>
+<form action= "{{url_for('sign_up', rid=records[0][0])}}" method = 'POST'>
+    <p>Course Id:</p>
+    <input type = 'text' value='{{records[0][0]}}' size='30' name = 'rid'>
+    <p>Course Name:</p>
+    <input type = 'text' value='{{records[0][1]}}' size='30' name = 'course_name'>    
+    <p>Email:</p>
+    <input type = 'text' value='example@rvhs.edu.sg' size='30' name = 'email'>
+
+    <input type = 'submit' value='Join'>
+</form>
+</body>
+</html>
